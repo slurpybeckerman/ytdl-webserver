@@ -1,0 +1,11 @@
+---
+version: "2"
+services:
+  ytdl:
+    image: slurpybeckerman/ytdl-webserver
+    container_name: ytdl
+    volumes:
+      - </path/to/ytdl/temp>:/home/app/public
+    ports:
+      - 3000:3000
+    restart: unless-stopped
