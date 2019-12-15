@@ -37,7 +37,7 @@ services:
     image: slurpybeckerman/ytdl-webserver
     container_name: ytdl
     volumes:
-      - </path/to/ytdl/temp>:/home/app/public # temp storage for videos
+      - </path/to/ytdl/temp>:/home/app/public/temp # temp storage for videos
     ports:
       - 3000:3000
     restart: unless-stopped
