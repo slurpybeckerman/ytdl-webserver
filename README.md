@@ -27,6 +27,22 @@ npm install && npm start
 docker run --name ytdl -d -p 3000:3000 algram/ytdl-webserver
 ```
 
+### Using Compose
+Use the provided docker-compose.yml or add it to your own like this:
+```yaml
+---
+version: "2"
+services:
+  ytdl:
+    image: slurpybeckerman/ytdl-webserver
+    container_name: ytdl
+    volumes:
+      - </path/to/ytdl/temp>:/home/app/public # temp storage for videos
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+```
+
 #### Advanced
 Build the docker image, create a directory to hold and access the downloaded videos on the host, and then start a container instance of the image.  
 ```
