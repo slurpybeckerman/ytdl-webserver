@@ -2,10 +2,10 @@
 version: "2"
 services:
   ytdl:
-    image: slurpybeckerman/ytdl-webserver
-    container_name: ytdl
+    image: slurpybeckerman/ytdl-webserver:dev
+    container_name: ytdl-dev
     volumes:
       - </path/to/ytdl/temp>:/home/app/public/temp # temp storage for videos
     ports:
-      - 3000:3000
+      - 3001:3000	# so its different from your production container
     restart: unless-stopped
